@@ -1,10 +1,11 @@
 import React from "react";
-import Home from "./Home";
-import InfiniteScroll from "./InfineScroll";
-import OptimisticUpdate from "./OptimisticUpdate";
-import DebouncingControlledInput from "./DebouncingControlledInput";
-import PollingPattern from "./PollingPattern";
-import Modal from "./Modal";
+import Home from "./ReactComponents/Home";
+import InfiniteScroll from "./ReactComponents/InfineScroll";
+import OptimisticUpdate from "./ReactComponents/OptimisticUpdate";
+import DebouncingControlledInput from "./ReactComponents/DebouncingControlledInput";
+import PollingPattern from "./ReactComponents/PollingPattern";
+import Modal from "./ReactComponents/Modal";
+import FakeAPI from "./NeogCampLMS/FakeAPI";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       {/* <OptimisticUpdate /> */}
       {/* <DebouncingControlledInput /> */}
       {/* <PollingPattern /> */}
-      <Modal />
+      {/* <Modal /> */}
+      <FakeAPI />
     </div>
   );
 }
