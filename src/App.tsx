@@ -7,6 +7,8 @@ import PollingPattern from "./ReactComponents/PollingPattern";
 import Modal from "./ReactComponents/Modal";
 import FakeAPI from "./NeogCampLMS/FakeAPI";
 import SearchArray from "./NeogCampLMS/SearchArray";
+import Dropdown from "./NeogCampLMS/Dropdown";
+import Dropdown_v2 from "./NeogCampLMS/Dropdown_v2";
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
       {/* <PollingPattern /> */}
       {/* <Modal /> */}
       {/* <FakeAPI /> */}
-      <SearchArray />
+      {/* <SearchArray /> */}
+      {/* <Dropdown /> */}
+      <Dropdown_v2 />
     </div>
   );
 }
