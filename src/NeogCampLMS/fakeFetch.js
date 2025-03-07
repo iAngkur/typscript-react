@@ -10,6 +10,8 @@ export default function fakeFetch(url) {
               { id: 1, name: "Pen", price: 30, quantity: 100 },
               { id: 2, name: "Pencil", price: 50, quantity: 50 },
               { id: 3, name: "Paper", price: 20, quantity: 30 },
+              { id: 4, name: "Book", price: 80, quantity: 5 },
+              { id: 5, name: "Eraser", price: 10, quantity: 100 },
             ]
           }
         });

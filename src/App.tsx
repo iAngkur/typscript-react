@@ -6,6 +6,7 @@ import DebouncingControlledInput from "./ReactComponents/DebouncingControlledInp
 import PollingPattern from "./ReactComponents/PollingPattern";
 import Modal from "./ReactComponents/Modal";
 import FakeAPI from "./NeogCampLMS/FakeAPI";
+import SearchArray from "./NeogCampLMS/SearchArray";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       {/* <DebouncingControlledInput /> */}
       {/* <PollingPattern /> */}
       {/* <Modal /> */}
-      <FakeAPI />
+      {/* <FakeAPI /> */}
+      <SearchArray />
     </div>
   );
 }
