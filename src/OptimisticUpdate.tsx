@@ -1,4 +1,15 @@
 import React, { useState } from "react";
+import styled from "styled-components";
+
+type ButtonProps = {
+  primary?: boolean;
+};
+
+const Button = styled.button<ButtonProps>`
+  background-color: ${(props) => (props.primary ? "blue" : "gray")};
+  color: white;
+  padding: 0.5em;
+`;
 
 type Item = {
   name: string;
@@ -32,11 +43,12 @@ function OptimisticUpdate() {
 
   return (
     <div>
-      <button
+      <Button
+        primary
         onClick={() => addItem({ name: "Body Spray", price: 200, quantity: 2 })}
       >
         +Add
-      </button>
+      </Button>
       {items.map((item: Item, index: number) => (
         <div key={index}>
           <h3>{item.name}</h3>
