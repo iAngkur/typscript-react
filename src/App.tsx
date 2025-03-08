@@ -9,6 +9,8 @@ import FakeAPI from "./NeogCampLMS/FakeAPI";
 import SearchArray from "./NeogCampLMS/SearchArray";
 import Dropdown from "./NeogCampLMS/Dropdown";
 import Dropdown_v2 from "./NeogCampLMS/Dropdown_v2";
+import BasicRoute from "./NeogCampLMS/Routing/BasicRoute";
+import DynamicRouting from "./NeogCampLMS/Routing/DynamicRouting";
 
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
       {/* <FakeAPI /> */}
       {/* <SearchArray /> */}
       {/* <Dropdown /> */}
-      <Dropdown_v2 />
+      {/* <Dropdown_v2 /> */}
+      {/* <BasicRoute /> */}
+      <DynamicRouting />
     </div>
   );
 }
