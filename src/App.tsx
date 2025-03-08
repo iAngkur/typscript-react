@@ -11,6 +11,9 @@ import Dropdown from "./NeogCampLMS/Dropdown";
 import Dropdown_v2 from "./NeogCampLMS/Dropdown_v2";
 import BasicRoute from "./NeogCampLMS/Routing/BasicRoute";
 import DynamicRouting from "./NeogCampLMS/Routing/DynamicRouting";
+import UseContext from "./NeogCampLMS/Hooks";
+import CartContextProvider from "./NeogCampLMS/Hooks/CartContextProvider";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
@@ -26,7 +29,12 @@ function App() {
       {/* <Dropdown /> */}
       {/* <Dropdown_v2 /> */}
       {/* <BasicRoute /> */}
-      <DynamicRouting />
+      {/* <DynamicRouting /> */}
+      <BrowserRouter>
+        <CartContextProvider>
+          <UseContext />
+        </CartContextProvider>
+      </BrowserRouter>
     </div>
   );
 }
