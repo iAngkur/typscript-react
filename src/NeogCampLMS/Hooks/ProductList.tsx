@@ -12,15 +12,11 @@ type ProductListProps = {
 };
 
 function ProductList({ products }: ProductListProps) {
-  const { items, setItems } = useCartContext();
+  const { handleAddtoCart } = useCartContext();
 
-  const onAddToCart = () => {
-    setItems(items + 1);
-  };
-
-  const elem = products.map(({ id, name, price }) => (
+  const elem = products.map((item) => (
     <div
-      key={id}
+      key={item.id}
       style={{
         border: "1px solid gray",
         margin: "0.25rem",
@@ -28,9 +24,9 @@ function ProductList({ products }: ProductListProps) {
       }}
     >
       <h2>
-        {name} <small>INR {price}</small>
+        {item.name} <small>INR {item.price}</small>
       </h2>
-      <button onClick={onAddToCart}>Add to Cart</button>
+      <button onClick={() => handleAddtoCart(item)}>Add to Cart</button>
     </div>
   ));
 

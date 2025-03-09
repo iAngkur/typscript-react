@@ -5,22 +5,39 @@ import React, {
   useContext,
   useState,
 } from "react";
+import { Product } from "./ProductList";
 
 interface MyContextProps {
-  items: number;
-  setItems: Dispatch<SetStateAction<number>>;
+  items: Product[];
+  handleAddtoCart: (item: Product) => void;
+  handleRemoveFromCart: (id: number) => void;
 }
 
 const CartContext = createContext<MyContextProps>({
-  items: 0,
-  setItems: () => {},
+  items: [],
+  handleAddtoCart: (item: Product) => {},
+  handleRemoveFromCart: (id: number) => {},
 });
 
 function CartContextProvider({ children }: { children: React.ReactNode }) {
-  const [items, setItems] = useState(0);
+  const [items, setItems] = useState<Product[]>([]);
+
+  const handleAddtoCart = (item: Product) => {
+    setItems([...items, item]);
+  };
+
+  const handleRemoveFromCart = (id: number) => {
+    setItems((prevItems) => {
+      const filteredItems = prevItems.filter((prevItem) => prevItem.id !== id);
+
+      return filteredItems;
+    });
+  };
 
   return (
-    <CartContext.Provider value={{ items, setItems }}>
+    <CartContext.Provider
+      value={{ items, handleAddtoCart, handleRemoveFromCart }}
+    >
       {children}
     </CartContext.Provider>
   );
