@@ -15,6 +15,8 @@ import UseContext from "./NeogCampLMS/Hooks";
 import CartContextProvider from "./NeogCampLMS/Hooks/CartContextProvider";
 import { BrowserRouter } from "react-router-dom";
 import UseReducer from "./NeogCampLMS/Hooks/UseReducer";
+import Index from "./NeogCampLMS/CSS/CssIndex";
+import CssIndex from "./NeogCampLMS/CSS/CssIndex";
 
 function App() {
   return (
@@ -36,7 +38,8 @@ function App() {
           <UseContext />
         </CartContextProvider>
       </BrowserRouter> */}
-      <UseReducer />
+      {/* <UseReducer /> */}
+      <CssIndex />
     </div>
   );
 }
