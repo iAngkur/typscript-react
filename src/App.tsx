@@ -32,14 +32,14 @@ function App() {
       {/* <Dropdown /> */}
       {/* <Dropdown_v2 /> */}
       {/* <BasicRoute /> */}
-      {/* <DynamicRouting /> */}
+      <DynamicRouting />
       {/* <BrowserRouter>
         <CartContextProvider>
           <UseContext />
         </CartContextProvider>
       </BrowserRouter> */}
       {/* <UseReducer /> */}
-      <CssIndex />
+      {/* <CssIndex /> */}
     </div>
   );
 }
