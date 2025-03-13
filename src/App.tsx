@@ -10,13 +10,14 @@ import SearchArray from "./NeogCampLMS/SearchArray";
 import Dropdown from "./NeogCampLMS/Dropdown";
 import Dropdown_v2 from "./NeogCampLMS/Dropdown_v2";
 import BasicRoute from "./NeogCampLMS/Routing/BasicRoute";
-import DynamicRouting from "./NeogCampLMS/Routing/DynamicRouting";
+import DynamicRouting from "./NeogCampLMS/Routing/AuthRouting/DynamicRouting";
 import UseContext from "./NeogCampLMS/Hooks";
 import CartContextProvider from "./NeogCampLMS/Hooks/CartContextProvider";
 import { BrowserRouter } from "react-router-dom";
 import UseReducer from "./NeogCampLMS/Hooks/UseReducer";
 import Index from "./NeogCampLMS/CSS/CssIndex";
 import CssIndex from "./NeogCampLMS/CSS/CssIndex";
+import LoginContextProvider from "./NeogCampLMS/Routing/AuthRouting/LoginContextProvider";
 
 function App() {
   return (
@@ -32,7 +33,11 @@ function App() {
       {/* <Dropdown /> */}
       {/* <Dropdown_v2 /> */}
       {/* <BasicRoute /> */}
-      <DynamicRouting />
+      <BrowserRouter>
+        <LoginContextProvider>
+          <DynamicRouting />
+        </LoginContextProvider>
+      </BrowserRouter>
       {/* <BrowserRouter>
         <CartContextProvider>
           <UseContext />
