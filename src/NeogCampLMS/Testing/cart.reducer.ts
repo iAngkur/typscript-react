@@ -30,6 +30,17 @@ export default function cartReducer(
         items: [...state.items, item],
         totalPrice: state.totalPrice + item.price,
         totalQuantity: state.totalQuantity + 1,
+        f,
+      };
+
+    case "REMOVE_FROM_CART":
+      return {
+        ...state,
+        items: state.items.filter(
+          (existingItem) => existingItem.name !== item.name
+        ),
+        totalPrice: state.totalPrice - item.price,
+        totalQuantity: state.totalQuantity - 1,
       };
 
     default:
