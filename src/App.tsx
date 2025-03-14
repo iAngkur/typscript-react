@@ -18,6 +18,7 @@ import UseReducer from "./NeogCampLMS/Hooks/UseReducer";
 import Index from "./NeogCampLMS/CSS/CssIndex";
 import CssIndex from "./NeogCampLMS/CSS/CssIndex";
 import LoginContextProvider from "./NeogCampLMS/Routing/AuthRouting/LoginContextProvider";
+import MyTest from "./NeogCampLMS/Testing/MyTest";
 
 function App() {
   return (
@@ -33,11 +34,11 @@ function App() {
       {/* <Dropdown /> */}
       {/* <Dropdown_v2 /> */}
       {/* <BasicRoute /> */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <LoginContextProvider>
           <DynamicRouting />
         </LoginContextProvider>
-      </BrowserRouter>
+      </BrowserRouter> */}
       {/* <BrowserRouter>
         <CartContextProvider>
           <UseContext />
@@ -45,6 +46,7 @@ function App() {
       </BrowserRouter> */}
       {/* <UseReducer /> */}
       {/* <CssIndex /> */}
+      <MyTest />
     </div>
   );
 }
